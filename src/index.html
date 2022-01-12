@@ -4,6 +4,7 @@
         <title>
             Weather
         </title>
+        <script src="script.js"></script>
     </head>
     <body>
         <header>
@@ -21,35 +22,35 @@
         <section>
         <div class = 'parent'>
             <div style="text-align:center;width: 300px;margin: 0 auto;"> 
-                <h1>Vannes</h1> 
+                <h1 id="city">Vannes</h1> 
             </div>
         </div>
 
         <div class = child >
             <div style="text-align: left;">
-                <h1>Icon</h1>
+                <h1 id="weather_icon">Icon</h1>
             </div>
             <div style="text-align: center;">
-                <h1>temperature</h1>
+                <h1 id="temperature">temperature</h1>
             </div>
 
             <div class = child>
                 <div style="text-align:right">
-                    <p>Max temperature</p></div>
+                    <p id="temperature_max">Max temperature</p></div>
                 <div style="text-align:right">
-                    <p>Min temperature<p></p>
+                    <p id="temperature_min">Min temperature<p></p>
                 </div>
             </div>
         </div>
 
             <div class= child>
                 <div style="text-align: left;">
-                    <p> Vent </p>
+                    <p id="wind_speed"> Vent </p>
                 </div>
                 <div style="text-align:center">
-                    <p> Humidite</p></div>
+                    <p id="humidity"> Humidite</p></div>
                 <div style="text-align:right">
-                    <p> Pression <p></p>
+                    <p id="pressure"> Pression <p></p>
                 </div>
             </div>
 
