@@ -10,6 +10,10 @@ humidity : texte decrivant l'humidité
 pressure : texte decrivant la pression
 */
 
+searchCity(){
+    document.getElementById("search").
+}
+
 function getApi(ville){
     let request = "http://api.openweathermap.org/data/2.5/weather?q="+ville+"&APPID=ee07e2bf337034f905cde0bdedae3db8";
     return fetch(request)
@@ -31,6 +35,9 @@ function editDom(json){
 function KtoC(temp){
     return Math.round((temp-273.15) * 100)/100
 }
+
+document.getElementById("confirm").addEventListener("click", searchCity());
+
 getApi("vannes").then(Response => editDom(Response));
 
 //{
