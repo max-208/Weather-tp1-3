@@ -6,7 +6,9 @@
         </title>
         <script src="script.js"></script>
 
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/weather-icons.min.css">
+        
     </head>
     <body>
         <header>
@@ -18,7 +20,7 @@
         </header>
         <section>
         <input type="text" id="search" name ="searchbar" placeholder="Saisir votre ville ">
-        <button type="button" id="confirm" name="button"> Valider  </button>
+        <button type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button>
         </section>
 
         <section>
@@ -29,29 +31,51 @@
         </div>
 
         <div class = 'parent' >
-            <div class = 'child'' style="text-align: left;">
-                <h1 id="weather_icon">Icon</h1>
+            <div class = 'child' style="text-align: left;">
+                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
             </div>
+
+            <div class = 'separator'></div>
+
             <div class = 'child''  style="text-align: center;">
-                <h1 id="temperature">Temperature</h1>
+                <p id="temperature" class="main-icon">T</h1>
             </div>
 
             <div class = 'child''>
                 <div style="text-align:right">
-                    <p id="temperature_max">Max temperature</p></div>
+                    <p id="temperature_max">Max</p></div>
                 <div style="text-align:right">
-                    <p id="temperature_min">Min temperature<p></p>
+                    <p id="temperature_min">Min<p></p>
                 </div>
             </div>
         </div>
 
             <div class= 'parent' >
-                <div  class = 'child'' style="text-align: left;">
+                <div  class = 'child'>
+                    <i class="wi secondary-icon wi-strong-wind"></i>
+                </div>
+                <div class = 'child'>
                     <p id="wind_speed"> Vent </p>
                 </div>
-                <div class = 'child'' style="text-align:center">
-                    <p id="humidity"> Humidite</p></div>
-                <div  class = 'child'' style="text-align:right">
+
+                <div class = 'separator'></div>
+
+                <div class = 'child'>
+                    <i class="wi secondary-icon wi-humidity"></i>
+                </div>
+
+                <div class = 'child'>
+                    <p id="humidity"> Humidite</p>
+                </div>
+
+
+                <div class = 'separator'></div>
+
+
+                <div class = 'child'>
+                    <i class="wi secondary-icon wi-barometer"></i>
+                </div>
+                <div class = 'child'>
                     <p id="pressure"> Pression <p></p>
                 </div>
             </div>

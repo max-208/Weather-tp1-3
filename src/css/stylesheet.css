@@ -1,7 +1,7 @@
 .parent {
     border: 1px solid black;
     margin: 1rem;
-    padding: 2rem 2rem;
+    padding: 0rem 0rem;
     text-align: center;
     background-color: darksalmon;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,8 +10,23 @@
   .child {
     display: inline-block;
     border: 1px solid red;
-    padding: 1rem 1rem;
+    padding: 0rem 0rem;
     vertical-align: middle;
     background-color: gainsboro;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
+
+.separator {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 0rem 2rem;
+  vertical-align: middle;
+  background-color: gainsboro;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.main-icon{
+  font-size:10vw
+}
+.secondary-icon{
+  font-size:2vw
+}

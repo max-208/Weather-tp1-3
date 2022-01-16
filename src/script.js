@@ -10,8 +10,10 @@ humidity : texte decrivant l'humidité
 pressure : texte decrivant la pression
 */
 
-searchCity(){
-    document.getElementById("search").
+function searchCity (){
+    let ville = document.getElementById("search").value;
+    console.log(ville);
+    getApi(ville).then(Response => editDom(Response));
 }
 
 function getApi(ville){
@@ -24,6 +26,7 @@ function getApi(ville){
 function editDom(json){
     console.log("Edit DOM");
     document.getElementById("city").innerHTML = json.name;
+    document.getElementById("weather_icon").className = "wi main-icon wi-owm-"+json.weather[0].id;
     document.getElementById("temperature").innerHTML = KtoC(json.main.temp) + "°C";
     document.getElementById("temperature_min").innerHTML = KtoC(json.main.temp_min) + "°C";
     document.getElementById("temperature_max").innerHTML = KtoC(json.main.temp_max) + "°C";
@@ -33,10 +36,9 @@ function editDom(json){
     
 }
 function KtoC(temp){
-    return Math.round((temp-273.15) * 100)/100
+    return Math.round(temp-273.15)
 }
 
-document.getElementById("confirm").addEventListener("click", searchCity());
 
 getApi("vannes").then(Response => editDom(Response));
 
