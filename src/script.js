@@ -8,7 +8,24 @@ temperature_max : texte decrivant la temperature min
 wind_speed : texte decrivant la vitesse du vent
 humidity : texte decrivant l'humidité
 pressure : texte decrivant la pression
+
+main-container : page d'acceuil
+home : acceuil
+contact : contact
+help : aide
 */
+
+function openHome(){
+    document.getElementById("main-container").innerHTML="";
+}
+
+function openContact(){
+    document.getElementById("main-container").innerHTML="";
+}
+
+function openHelp(){
+    document.getElementById("main-container").innerHTML="";
+}
 
 function searchCity (){
     let ville = document.getElementById("search").value;

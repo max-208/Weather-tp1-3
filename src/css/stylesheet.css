@@ -1,32 +1,50 @@
 .parent {
-    border: 1px solid black;
     margin: 1rem;
     padding: 0rem 0rem;
     text-align: center;
-    background-color: darksalmon;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
   }
   .child {
     display: inline-block;
-    border: 1px solid red;
     padding: 0rem 0rem;
     vertical-align: middle;
-    background-color: gainsboro;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
 .separator {
   display: inline-block;
-  border: 1px solid red;
   padding: 0rem 2rem;
   vertical-align: middle;
-  background-color: gainsboro;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .main-icon{
-  font-size:10vw
+  font-size:10em;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .secondary-icon{
-  font-size:2vw
+  font-size:3em
 }
+
+.box {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 10px solid #1abc9c;
+  background-color:whitesmoke;
+  font-size: 30px;
+  border-radius: 50px 50px;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {background: #eee;}

@@ -11,45 +11,45 @@
         
     </head>
     <body>
-        <header>
+        <section class = "box">
             <nav>
-                <a href="/index.js/">Acceuil</a> 
-                <a href="/contact.js/">Contact</a> 
-                <a href="/aide.js/">Aide</a> 
-              </nav> 
-        </header>
-        <section>
-        <input type="text" id="search" name ="searchbar" placeholder="Saisir votre ville ">
-        <button type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button>
+                <button class="btn">Acceuil</button>
+                <div class = 'separator'></div>
+                <button class="btn">Contact</button>
+                <div class = 'separator'></div>
+                <button class="btn">Aide</button>
+            </nav> 
         </section>
 
-        <section>
-        <div class = 'parent'>
-            <div style="text-align:center;width: 300px;margin: 0 auto;"> 
+        <section class = "box">
+            <div class = 'parent' >
+                <input type="text" id="search" name ="searchbar" placeholder="Saisir votre ville ">
+                <button type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button>
+            </div>
+            <div class = 'parent'>
                 <h1 id="city">Vannes</h1> 
             </div>
-        </div>
-
-        <div class = 'parent' >
-            <div class = 'child' style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-
-            <div class = 'separator'></div>
-
-            <div class = 'child''  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h1>
-            </div>
-
-            <div class = 'child''>
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
+        
+            <div class = 'parent' >
+                <div class = 'child' style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+            
+                <div class = 'separator'></div>
+            
+                <div class = 'child''  style="text-align: center;">
+                    <p id="temperature" class="main-icon">T</h1>
+                </div>
+            
+                <div class = 'child''>
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p></div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min<p></p>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        
             <div class= 'parent' >
                 <div  class = 'child'>
                     <i class="wi secondary-icon wi-strong-wind"></i>
@@ -57,21 +57,14 @@
                 <div class = 'child'>
                     <p id="wind_speed"> Vent </p>
                 </div>
-
                 <div class = 'separator'></div>
-
                 <div class = 'child'>
                     <i class="wi secondary-icon wi-humidity"></i>
                 </div>
-
                 <div class = 'child'>
                     <p id="humidity"> Humidite</p>
                 </div>
-
-
                 <div class = 'separator'></div>
-
-
                 <div class = 'child'>
                     <i class="wi secondary-icon wi-barometer"></i>
                 </div>
@@ -81,22 +74,11 @@
             </div>
 
 
+            </section>
 
 
-
-        <footer>
-            <footer>
-                <p>
-                    Weather App
-                </p>
-                <p>
-                    DANIEL Maxime - LAIDIN Philippe
-                </p>
-              </footer>
-              
-            
-
-
-        </footer>
+            <section class = "box">
+                DANIEL Maxime - LAIDIN Philippe
+            </section>
     </body>
 </html>
