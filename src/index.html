@@ -13,40 +13,40 @@
     <body>
         <section class = "box">
             <nav>
-                <button class="btn">Acceuil</button>
-                <div class = 'separator'></div>
-                <button class="btn">Contact</button>
-                <div class = 'separator'></div>
-                <button class="btn">Aide</button>
+                <button class="btn" onclick="openHome()" >Acceuil</button>
+                <div class = "separator"></div>
+                <button class="btn" onclick="openContact()" >Contact</button>
+                <div class = "separator"></div>
+                <button class="btn" onclick="openHelp()" >Aide</button>
             </nav> 
         </section>
 
-        <section class = "box">
-            <div class = 'parent' >
-                <div class = 'child'>
+        <section class = "box" id="main-container">
+            <div class = "parent" >
+                <div class = "child">
                     <input class="search" type="text" id="search" name ="searchbar" placeholder="Saisir votre ville ">
                 </div>
-                <div class = 'separator'></div>
-                <div class = 'child'>
+                <div class = "separator"></div>
+                <div class = "child">
                     <button class ="btn" type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button>
                 </div>
             </div>
-            <div class = 'parent'>
+            <div class = "parent">
                 <h1 id="city">Vannes</h1> 
             </div>
         
-            <div class = 'parent' >
-                <div class = 'child' style="text-align: left;">
+            <div class = "parent" >
+                <div class = "child" style="text-align: left;">
                     <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
                 </div>
             
-                <div class = 'separator'></div>
+                <div class = "separator"></div>
             
-                <div class = 'child''  style="text-align: center;">
+                <div class = "child""  style="text-align: center;">
                     <p id="temperature" class="main-icon">T</h1>
                 </div>
             
-                <div class = 'child''>
+                <div class = "child"">
                     <div style="text-align:right">
                         <p id="temperature_max">Max</p></div>
                     <div style="text-align:right">
@@ -55,38 +55,37 @@
                 </div>
             </div>
         
-            <div class= 'parent' >
-                <div  class = 'child'>
+            <div class= "parent" >
+                <div  class = "child">
                     <i class="wi secondary-icon wi-strong-wind"></i>
                 </div>
-                <div class = 'small_separator'></div>
-                <div class = 'child'>
+                <div class = "small_separator"></div>
+                <div class = "child">
                     <p id="wind_speed"> Vent </p>
                 </div>
-                <div class = 'separator'></div>
-                <div class = 'child'>
+                <div class = "separator"></div>
+                <div class = "child">
                     <i class="wi secondary-icon wi-humidity"></i>
                 </div>
-                <div class = 'small_separator'></div>
-                <div class = 'child'>
+                <div class = "small_separator"></div>
+                <div class = "child">
                     <p id="humidity"> Humidite</p>
                 </div>
-                <div class = 'separator'></div>
-                <div class = 'child'>
+                <div class = "separator"></div>
+                <div class = "child">
                     <i class="wi secondary-icon wi-barometer"></i>
                 </div>
-                <div class = 'small_separator'></div>
-                <div class = 'child'>
+                <div class = "small_separator"></div>
+                <div class = "child">
                     <p id="pressure"> Pression <p></p>
                 </div>
             </div>
 
 
-            </section>
+        </section>
+            <section class = "box footer">
+            DANIEL Maxime - LAIDIN Philippe
+        </section>
 
-
-            <section class = "box">
-                DANIEL Maxime - LAIDIN Philippe
-            </section>
     </body>
 </html>

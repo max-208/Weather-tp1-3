@@ -16,7 +16,9 @@ help : aide
 */
 
 function openHome(){
-    document.getElementById("main-container").innerHTML="";
+    document.getElementById("main-container").innerHTML='<div class = "parent" ><div class = "child"><input class="search" type="text" id="search" name ="searchbar" placeholder="Saisir votre ville "></div><div class = "separator"></div><div class = "child"><button class ="btn" type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button></div></div><div class = "parent"><h1 id="city">Vannes</h1> </div><div class = "parent" ><div class = "child" style="text-align: left;"><i id="weather_icon" class="wi main-icon wi-owm-803"></i></div><div class = "separator"></div><div class = "child""  style="text-align: center;"><p id="temperature" class="main-icon">T</h1></div><div class = "child""><div style="text-align:right"><p id="temperature_max">Max</p></div><div style="text-align:right"><p id="temperature_min">Min<p></p></div></div></div><div class= "parent" ><div  class = "child"><i class="wi secondary-icon wi-strong-wind"></i></div><div class = "small_separator"></div><div class = "child"><p id="wind_speed"> Vent </p></div><div class = "separator"></div><div class = "child"><i class="wi secondary-icon wi-humidity"></i></div><div class = "small_separator"></div><div class = "child"><p id="humidity"> Humidite</p></div><div class = "separator"></div><div class = "child"><i class="wi secondary-icon wi-barometer"></i></div><div class = "small_separator"></div><div class = "child"><p id="pressure"> Pression <p></p></div></div>';
+    document.getElementById("search").value = "vannes";
+    searchCity();
 }
 
 function openContact(){
