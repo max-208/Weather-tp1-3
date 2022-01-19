@@ -9,10 +9,7 @@ wind_speed : texte decrivant la vitesse du vent
 humidity : texte decrivant l'humidité
 pressure : texte decrivant la pression
 
-main-container : page d'acceuil
-home : acceuil
-contact : contact
-help : aide
+main-container : centre de la page
 */
 
 function openHome(){
@@ -22,7 +19,7 @@ function openHome(){
 }
 
 function openContact(){
-    document.getElementById("main-container").innerHTML="";
+    document.getElementById("main-container").innerHTML='<div class = "parent" ><p>Page de contact.</p><div class = "parent"><h1>DANIEL Maxime </h1><br><h1>LAIDIN Philippe </h1></div></div>';
 }
 
 function openHelp(){
