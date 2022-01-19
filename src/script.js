@@ -45,8 +45,8 @@ function editDom(json){
     document.getElementById("city").innerHTML = json.name;
     document.getElementById("weather_icon").className = "wi main-icon wi-owm-"+json.weather[0].id;
     document.getElementById("temperature").innerHTML = KtoC(json.main.temp) + "°C";
-    document.getElementById("temperature_min").innerHTML = KtoC(json.main.temp_min) + "°C";
-    document.getElementById("temperature_max").innerHTML = KtoC(json.main.temp_max) + "°C";
+    document.getElementById("temperature_min").innerHTML = KtoC(json.main.temp_min) + "°C min";
+    document.getElementById("temperature_max").innerHTML = KtoC(json.main.temp_max) + "°C max";
     document.getElementById("wind_speed").innerHTML = json.wind.speed + "m/s";
     document.getElementById("humidity").innerHTML = json.main.humidity + "%";
     document.getElementById("pressure").innerHTML = json.main.pressure + "Pa";

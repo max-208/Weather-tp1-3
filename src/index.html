@@ -23,8 +23,13 @@
 
         <section class = "box">
             <div class = 'parent' >
-                <input type="text" id="search" name ="searchbar" placeholder="Saisir votre ville " style="font-size: larger;">
-                <button type="button" id="confirm" name="button" style="font-size: larger;" onclick="searchCity() "> Valider </button>
+                <div class = 'child'>
+                    <input class="search" type="text" id="search" name ="searchbar" placeholder="Saisir votre ville ">
+                </div>
+                <div class = 'separator'></div>
+                <div class = 'child'>
+                    <button class ="btn" type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button>
+                </div>
             </div>
             <div class = 'parent'>
                 <h1 id="city">Vannes</h1> 
@@ -54,6 +59,7 @@
                 <div  class = 'child'>
                     <i class="wi secondary-icon wi-strong-wind"></i>
                 </div>
+                <div class = 'small_separator'></div>
                 <div class = 'child'>
                     <p id="wind_speed"> Vent </p>
                 </div>
@@ -62,6 +68,7 @@
                 <div class = 'child'>
                     <i class="wi secondary-icon wi-humidity"></i>
                 </div>
+                <div class = 'small_separator'></div>
                 <div class = 'child'>
                     <p id="humidity"> Humidite</p>
                 </div>
@@ -71,6 +78,7 @@
                 <div class = 'child'>
                     <i class="wi secondary-icon wi-barometer"></i>
                 </div>
+                <div class = 'small_separator'></div>
                 <div class = 'child'>
                     <p id="pressure"> Pression <p></p>
                 </div>
