@@ -15,8 +15,10 @@
 .separator {
   display: inline-block;
   padding: 0rem 2rem;
-  vertical-align: middle;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.small_separator {
+  display: inline-block;
+  padding: 0rem 1rem;
 }
 .main-icon{
   font-size:10em;
@@ -31,7 +33,7 @@
   margin: 10px;
   padding: 20px;
   text-align: center;
-  border: 10px solid #1abc9c;
+  border: 5px solid #1abc9c;
   background-color:whitesmoke;
   font-size: 30px;
   border-radius: 50px 50px;
@@ -48,3 +50,19 @@
 
 /* On mouse-over */
 .btn:hover {background: #eee;}
+
+.search {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 30px;
+  border: 1px solid #ccc;
+  float: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+}
