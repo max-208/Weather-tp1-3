@@ -31,7 +31,7 @@
   margin: 10px;
   padding: 20px;
   text-align: center;
-  border: 10px solid #1abc9c;
+  border: 5px solid #1abc9c;
   background-color:whitesmoke;
   font-size: 30px;
   border-radius: 50px 50px;
@@ -48,3 +48,4 @@
 
 /* On mouse-over */
 .btn:hover {background: #eee;}
+
