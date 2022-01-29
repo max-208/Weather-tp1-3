@@ -13,21 +13,21 @@ main-container : centre de la page
 */
 
 function openHome(){
-    document.getElementById("main-container").innerHTML='<div class = "parent" ><div class = "child"><input class="search" type="text" id="search" name ="searchbar" placeholder="Saisir votre ville "></div><div class = "separator"></div><div class = "child"><button class ="btn" type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button></div></div><div class = "parent"><h1 id="city">Vannes</h1> </div><div class = "parent" ><div class = "child" style="text-align: left;"><i id="weather_icon" class="wi main-icon wi-owm-803"></i></div><div class = "separator"></div><div class = "child""  style="text-align: center;"><p id="temperature" class="main-icon">T</h1></div><div class = "child""><div style="text-align:right"><p id="temperature_max">Max</p></div><div style="text-align:right"><p id="temperature_min">Min<p></p></div></div></div><div class= "parent" ><div  class = "child"><i class="wi secondary-icon wi-strong-wind"></i></div><div class = "small_separator"></div><div class = "child"><p id="wind_speed"> Vent </p></div><div class = "separator"></div><div class = "child"><i class="wi secondary-icon wi-humidity"></i></div><div class = "small_separator"></div><div class = "child"><p id="humidity"> Humidite</p></div><div class = "separator"></div><div class = "child"><i class="wi secondary-icon wi-barometer"></i></div><div class = "small_separator"></div><div class = "child"><p id="pressure"> Pression <p></p></div></div>';
-    document.getElementById("search").value = "vannes";
+    $("#main-container").html('<div class = "parent" ><div class = "child"><input class="search" type="text" id="search" name ="searchbar" placeholder="Saisir votre ville "></div><div class = "separator"></div><div class = "child"><button class ="btn" type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button></div></div><div class = "parent"><h1 id="city">Vannes</h1> </div><div class = "parent" ><div class = "child" style="text-align: left;"><i id="weather_icon" class="wi main-icon wi-owm-803"></i></div><div class = "separator"></div><div class = "child""  style="text-align: center;"><p id="temperature" class="main-icon">T</h1></div><div class = "child""><div style="text-align:right"><p id="temperature_max">Max</p></div><div style="text-align:right"><p id="temperature_min">Min<p></p></div></div></div><div class= "parent" ><div  class = "child"><i class="wi secondary-icon wi-strong-wind"></i></div><div class = "small_separator"></div><div class = "child"><p id="wind_speed"> Vent </p></div><div class = "separator"></div><div class = "child"><i class="wi secondary-icon wi-humidity"></i></div><div class = "small_separator"></div><div class = "child"><p id="humidity"> Humidite</p></div><div class = "separator"></div><div class = "child"><i class="wi secondary-icon wi-barometer"></i></div><div class = "small_separator"></div><div class = "child"><p id="pressure"> Pression <p></p></div></div>');
+    $("#search").val("vannes");
     searchCity();
 }
 
 function openContact(){
-    document.getElementById("main-container").innerHTML='<div class = "parent" ><p>Page de contact.</p><div class = "parent"><h1>DANIEL Maxime </h1><br><h1>LAIDIN Philippe </h1></div></div>';
+    $("#main-container").html('<div class = "parent" ><p>Page de contact.</p><div class = "parent"><h1>DANIEL Maxime </h1><br><h1>LAIDIN Philippe </h1></div></div>');
 }
 
 function openHelp(){
-    document.getElementById("main-container").innerHTML='<div class = "parent" ><h1>AIDE</h1><div class = "parent"><p>Si vous ne parvenez pas à accéder à votre ville, </br>il est probable que nous rencontrions actuellement un problème temporaire.</br>N\'hésitez pas à nous contactez si les problèmes persistent.</p></div></div>';
+    $("#main-container").html('<div class = "parent" ><h1>AIDE</h1><div class = "parent"><p>Si vous ne parvenez pas à accéder à votre ville, </br>il est probable que nous rencontrions actuellement un problème temporaire.</br>N\'hésitez pas à nous contactez si les problèmes persistent.</p></div></div>');
 }
 
 function searchCity (){
-    let ville = document.getElementById("search").value;
+    let ville = $("#search").val();
     console.log(ville);
     getApi(ville).then(Response => editDom(Response));
 }
@@ -41,14 +41,14 @@ function getApi(ville){
 
 function editDom(json){
     console.log("Edit DOM");
-    document.getElementById("city").innerHTML = json.name;
-    document.getElementById("weather_icon").className = "wi main-icon wi-owm-"+json.weather[0].id;
-    document.getElementById("temperature").innerHTML = KtoC(json.main.temp) + "°C";
-    document.getElementById("temperature_min").innerHTML = KtoC(json.main.temp_min) + "°C min";
-    document.getElementById("temperature_max").innerHTML = KtoC(json.main.temp_max) + "°C max";
-    document.getElementById("wind_speed").innerHTML = json.wind.speed + "m/s";
-    document.getElementById("humidity").innerHTML = json.main.humidity + "%";
-    document.getElementById("pressure").innerHTML = json.main.pressure + "Pa";
+    $("#city").html( json.name);
+    $("#weather_icon").attr("class","wi main-icon wi-owm-"+json.weather[0].id);
+    $("#temperature").html( KtoC(json.main.temp) + "°C");
+    $("#temperature_min").html( KtoC(json.main.temp_min) + "°C min");
+    $("#temperature_max").html( KtoC(json.main.temp_max) + "°C max");
+    $("#wind_speed").html( json.wind.speed + "m/s");
+    $("#humidity").html( json.main.humidity + "%");
+    $("#pressure").html( json.main.pressure + "Pa");
     
 }
 function KtoC(temp){

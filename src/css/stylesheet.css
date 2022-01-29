@@ -2,14 +2,14 @@
     margin: 1rem;
     padding: 0rem 0rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
     font-weight: bold;
   }
   .child {
     display: inline-block;
     padding: 0rem 0rem;
     vertical-align: middle;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
   }
 
 .separator {
@@ -52,6 +52,10 @@
 .btn:hover {background: #eee;}
 
 .search {
+  background-image: url('https://e7.pngegg.com/pngimages/982/274/png-clipart-computer-icons-location-montana-dress-icon-logo-map-thumbnail.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 50px;
   float: right;
   padding: 6px;
   border: none;
