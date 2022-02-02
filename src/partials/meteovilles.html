@@ -1,32 +1,255 @@
-<!DOCTYPE html>
-<html>
-<head>
 
-<meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <link rel="stylesheet" href="../css/stylesheet.css">
-        <link rel="stylesheet" href="../css/weather-icons.min.css">
-        
-</head>
-<body>
-  <div class="col s12 m7">
-    <h2 class="header">Horizontal Card</h2>
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
-      </div>
-      <div class="card-stacked">
+<div class="row">
+ <div class="col s6 ">
+    <h2 class="header">Carte d'une ville</h2>
+      <div class="card-stacked" >
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
+            <div class = "parent text-white bg-dark" >
+            <h6 id="city">Vannes</h6> 
+            <p id="temperature" class="main-icon">T</h6>
+            </div>
         </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+                <div class = "child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+            
+                <div class = "separator"></div>
+            
+                <div class = "child""  style="text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+            
+                <div class = "child"">
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p></div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min<p></p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+        <div class="card-content">
+            <div class= "parent text-white bg-dark" >
+                <div  class = "child">
+                    <i class="wi secondary-icon wi-strong-wind"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="wind_speed"> Vent </p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-humidity"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="humidity"> Humidite</p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-barometer"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="pressure"> Pression <p></p>
+                </div>
+                
+            </div>       
         </div>
       </div>
-    </div>
+    
   </div>    
 
 
-</body>
+  <div class="col s6 ">
+    <h2 class="header">Carte d'une ville</h2>
+      <div class="card-stacked" >
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+            <h6 id="city">Nantes</h6> 
+            <p id="temperature" class="main-icon">T</h6>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+                <div class = "child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+            
+                <div class = "separator"></div>
+            
+                <div class = "child""  style="text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+            
+                <div class = "child"">
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p></div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min<p></p>
+                    </div>
+                </div>
+            </div>     
+        </div>
 
-</html>
+        <div class="card-content">
+            <div class= "parent text-white bg-dark" >
+                <div  class = "child">
+                    <i class="wi secondary-icon wi-strong-wind"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="wind_speed"> Vent </p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-humidity"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="humidity"> Humidite</p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-barometer"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="pressure"> Pression <p></p>
+                </div>
+                
+            </div>       
+        </div>
+      </div>
+  </div>    
+
+</div>
+<div class="row">
+  <div class="col s6 ">
+    <h2 class="header">Carte d'une ville</h2>
+      <div class="card-stacked" >
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+            <h6 id="city">Palerme</h6> 
+            <p id="temperature" class="main-icon">T</h6>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+                <div class = "child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+            
+                <div class = "separator"></div>
+            
+                <div class = "child""  style="text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+            
+                <div class = "child"">
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p></div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min<p></p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+        <div class="card-content">
+            <div class= "parent text-white bg-dark" >
+                <div  class = "child">
+                    <i class="wi secondary-icon wi-strong-wind"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="wind_speed"> Vent </p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-humidity"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="humidity"> Humidite</p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-barometer"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="pressure"> Pression <p></p>
+                </div>
+                
+            </div>       
+        </div>
+      </div>
+  </div>    
+
+
+  <div class="col s6 ">
+    <h2 class="header">Carte d'une ville</h2>
+      <div class="card-stacked" >
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+            <h6 id="city">Miami</h6> 
+            <p id="temperature" class="main-icon">T</h6>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class = "parent text-white bg-dark" >
+                <div class = "child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+            
+                <div class = "separator"></div>
+            
+                <div class = "child""  style="text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+            
+                <div class = "child"">
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p></div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min<p></p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+        <div class="card-content">
+            <div class= "parent text-white bg-dark" >
+                <div  class = "child">
+                    <i class="wi secondary-icon wi-strong-wind"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="wind_speed"> Vent </p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-humidity"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="humidity"> Humidite</p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-barometer"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="pressure"> Pression <p></p>
+                </div>
+                
+            </div>       
+        </div>
+      </div>
+    </div>
+</div>
