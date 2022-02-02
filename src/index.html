@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MeteoApp">
     <head>
         <title>
             Weather
@@ -8,43 +8,26 @@
 
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/weather-icons.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="viewport" content="width=device-width, initial-
-        scale=1">
-<!-- including bootstrap css libraries -->
-<link rel="stylesheet"
-href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<!-- including bootstrap JavaScript libraries -->
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- including bootstrap Popper libraries -->
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<!-- including bootstrap libraries -->
-<script
-src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="node_modules/angular/angular.js"></script>
-<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
-<script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
-<link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css" />
-    
-<script src="script.js" charset="UTF-8"></script>
-<head>
-    <meta charset="utf-8" />
-</head>
+        <!-- including bootstrap css libraries -->
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+        <!-- including angular libraries -->
+        <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
+        <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css" />
+        <script src="js/app.js" charset="UTF-8"></script>
 
-
-        
+        <meta charset="utf-8" />
     </head>
-    <body  ng-app="">
 
-        <section ng-view="" class = "box container-fluid border roundedborder-info text-white bg-dark" id="main-container">
-            
-        </section>
-
-        <section class = "box  container-fluid border roundedborder-info text-white bg-dark">
-            &copy; 2022  |   DANIEL Maxime - LAIDIN Philippe
-        </section>
+    <body >
+        <div ng-view></div>
     </body>
 </html>
