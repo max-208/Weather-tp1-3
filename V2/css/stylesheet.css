@@ -1,0 +1,84 @@
+
+.parent {
+    margin: 1rem;
+    padding: 0rem 0rem;
+    text-align: center;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-weight: bold;
+  }
+  .child {
+    display: inline-block;
+    padding: 0rem 0rem;
+    vertical-align: middle;
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+  }
+
+.separator {
+  display: inline-block;
+  padding: 0rem 2rem;
+}
+.small_separator {
+  display: inline-block;
+  padding: 0rem 1rem;
+}
+.main-icon{
+  font-size:10em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.secondary-icon{
+  font-size:3em
+}
+
+.box {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 5px solid #1abc9c;
+  background-color:whitesmoke;
+  font-size: 30px;
+  border-radius: 50px 50px;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {background: #eee;}
+
+.search {
+  background-image: url(../pin.jpg) ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  text-indent: 50px;
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 30px;
+  border: 1px solid #ccc;
+  float: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+}
+::placeholder {
+  color: white;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

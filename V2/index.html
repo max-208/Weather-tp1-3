@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Weather
+        </title>
+        <script src="script.js"></script>
+
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/weather-icons.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-
+        scale=1">
+<!-- including bootstrap css libraries -->
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- including bootstrap JavaScript libraries -->
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- including bootstrap Popper libraries -->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<!-- including bootstrap libraries -->
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="script.js" charset="UTF-8"></script>
+<head>
+    <meta charset="utf-8" />
+</head>
+
+
+
+        
+    </head>
+    <body>
+        <section class = 'box container-fluid border roundedborder-info text-white bg-dark'>
+            <nav>
+                <button class="btn text-white bg-dark btn-lg " onclick="openHome()" >Acceuil</button>
+                <div class = "separator"></div>
+                <button class="btn text-white bg-dark btn-lg" onclick="openContact()" >Contact</button>
+                <div class = "separator"></div>
+                <button class="btn text-white bg-dark btn-lg" onclick="openHelp()" >Aide</button>
+            </nav> 
+        </section>
+
+        <section class = "box container-fluid border roundedborder-info text-white bg-dark" id="main-container">
+            <div class = "parent text-white bg-dark" >
+                <div class = "child">
+                    <input class="search bg-secondary text-white" type="text" id="search" name ="searchbar" placeholder="Saisir votre ville ">
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <button class ="btn btn-secondary btn-lg" type="button" id="confirm" name="button" onclick="searchCity()"> Valider </button>
+                </div>
+            </div>
+            <div class = "parent text-white bg-dark">
+                <h1 id="city">Vannes</h1> 
+            </div>
+        
+            <div class = "parent text-white bg-dark" >
+                <div class = "child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+            
+                <div class = "separator"></div>
+            
+                <div class = "child""  style="text-align: center;">
+                    <p id="temperature" class="main-icon">T</h1>
+                </div>
+            
+                <div class = "child"">
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p></div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min<p></p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class= "parent text-white bg-dark" >
+                <div  class = "child">
+                    <i class="wi secondary-icon wi-strong-wind"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="wind_speed"> Vent </p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-humidity"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="humidity"> Humidite</p>
+                </div>
+                <div class = "separator"></div>
+                <div class = "child">
+                    <i class="wi secondary-icon wi-barometer"></i>
+                </div>
+                <div class = "small_separator"></div>
+                <div class = "child">
+                    <p id="pressure"> Pression <p></p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class = "box  container-fluid border roundedborder-info text-white bg-dark">
+            &copy; 2022  |   DANIEL Maxime - LAIDIN Philippe
+        </section>
+    </body>
+</html>
