@@ -56,7 +56,7 @@ function KtoC(temp){
 }
 
 
-getApi("vannes").then(Response => editDom(Response));
+//getApi("vannes").then(Response => editDom(Response));
 
 //{
 //    "coord": {
