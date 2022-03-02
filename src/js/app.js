@@ -31,33 +31,38 @@ main-container : centre de la page
 */
 app.controller('villesCtrl',
   function($scope,$http){
-    ajouteVille("vannes");
-    ajouteVille("rennes");
-    ajouteVille("nantes");
-    ajouteVille("brest");
-    $scope.message = "uwu";
-    function ajouteVille(ville){
-      $http({
-          method : "GET",
-          url: "http://api.openweathermap.org/data/2.5/weather?q="+ville+"&APPID=ee07e2bf337034f905cde0bdedae3db8&lang=FR&units=metric"
-      }).then(function successCallback(response) {
-          // this callback will be called asynchronously
-          // when the response is available
-          console.log(response.json()); 
-        }, function errorCallback(response) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-        })
-  }
+    $scope.element=[];
+    ajouteVilles(["vannes","rennes","nantes","brest"]);
+    function ajouteVilles(villes){
+      for(let ville of villes){
+        $http({
+            method : "GET",
+            url: "http://api.openweathermap.org/data/2.5/weather?q="+ville+"&APPID=ee07e2bf337034f905cde0bdedae3db8&lang=FR&units=metric"
+        }).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+            console.log(response); 
+            console.log(response.data); 
+            var json = response.data;
+            $scope.element.push({
+              city : json.name,
+              weather_icon : "wi main-icon wi-owm-"+json.weather[0].id,
+              temperature : json.main.temp + "°C",
+              temperature_min : json.main.temp_min + "°C min",
+              temperature_max : json.main.temp_max + "°C max",
+              wind_speed : json.wind.speed + "m/s",
+              humidity : json.main.humidity + "%",
+              pressure : json.main.pressure + "Pa"
+            });
+
+          }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+          })
+        }
+    }
 })
 
-
-
-
-ajouteVille("vannes");
-ajouteVille("rennes");
-ajouteVille("nantes");
-ajouteVille("brest");
 //{
 //    "coord": {
 //      "lon": -2.5,
