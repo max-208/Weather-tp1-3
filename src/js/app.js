@@ -32,8 +32,9 @@ main-container : centre de la page
 app.controller('villesCtrl',
   function($scope,$http){
     $scope.element=[];
-    ajouteVilles(["vannes","rennes","nantes","brest"]);
-    function ajouteVilles(villes){
+    var villeList = JSON.parse(localStorage.getItem('villeList')) || [];
+    afficheVille(villeList);
+    function afficheVille(villes){
       for(let ville of villes){
         $http({
             method : "GET",
@@ -63,6 +64,22 @@ app.controller('villesCtrl',
     }
 })
 
+
+
+app.controller('addVille',
+  function($scope,$http){
+    $scope.sumbit=function(form){
+      let city = form.$$element[0][0].value; //on etrait le nom de la ville du formulaire
+      console.log(city);
+      //on ajoute au localstorage
+      var oldItems = JSON.parse(localStorage.getItem('villeList')) || [];
+      if(! oldItems.includes(city)){
+        oldItems.push(city);
+      }
+      localStorage.setItem('villeList', JSON.stringify(oldItems));
+      
+    }
+})
 //{
 //    "coord": {
 //      "lon": -2.5,
