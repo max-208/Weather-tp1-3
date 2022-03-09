@@ -32,6 +32,19 @@ main-container : centre de la page
 app.controller('villesCtrl',
   function($scope,$http){
     $scope.element=[];
+    $scope.chargeVille=function(city){
+      location.href='#!/previsions?city='+city;
+    }
+    $scope.removeVille=function(city){
+      console.log(city);
+      var oldItems = JSON.parse(localStorage.getItem('villeList')) || [];
+      oldItems = oldItems.filter(function(value, index, arr){ 
+        return value != city.toLowerCase();
+      });
+      localStorage.setItem('villeList', JSON.stringify(oldItems));
+      location.href='#!/';
+      window.event.stopPropagation();
+    }
     var villeList = JSON.parse(localStorage.getItem('villeList')) || [];
     afficheVille(villeList);
     function afficheVille(villes){
@@ -65,11 +78,11 @@ app.controller('villesCtrl',
 })
 
 
-
 app.controller('addVille',
   function($scope,$http){
     $scope.sumbit=function(form){
-      let city = form.$$element[0][0].value; //on etrait le nom de la ville du formulaire
+      let city = form.$$element[0][0].value.toLowerCase(); //on etrait le nom de la ville du formulaire
+      
       console.log(city);
       //on ajoute au localstorage
       var oldItems = JSON.parse(localStorage.getItem('villeList')) || [];
