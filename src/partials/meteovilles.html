@@ -8,6 +8,10 @@
     <div class="col s12 m6" ng-repeat="x in element">
         <div class="card grey darken-4" ng-click="chargeVille(x.city)" >  
             <div class="card-content">
+                
+                <a class="btn-floating btn-large red" ng-click="removeVille(x.city)">
+                    <i class="large material-icons">remove</i>
+                </a>
                 <div class="parent white-text ">
                     <h2 id="city">{{x.city}}</h2>
                     <div class="child" style="text-align: left;">
@@ -61,5 +65,3 @@
     </div>
 </div>
 </div>
-
-
