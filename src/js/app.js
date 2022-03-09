@@ -32,6 +32,9 @@ main-container : centre de la page
 app.controller('villesCtrl',
   function($scope,$http){
     $scope.element=[];
+    $scope.chargeVille=function(city){
+      location.href='#!/previsions?city='+city;
+    }
     var villeList = JSON.parse(localStorage.getItem('villeList')) || [];
     afficheVille(villeList);
     function afficheVille(villes){
@@ -63,7 +66,6 @@ app.controller('villesCtrl',
         }
     }
 })
-
 
 
 app.controller('addVille',
