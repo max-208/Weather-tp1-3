@@ -126,3 +126,36 @@ app.controller('addVille',
 //    "name": "Arrondissement de Vannes",
 //    "cod": 200
 //}
+
+app.controller('prevision',
+  function ($scope, $http) {
+    $scope.element = [];
+    var ville = JSON.parse(localStorage.getItem('ville')) || [];
+    affichePrevisions(ville);
+    function affichePrevisions(ville) {
+
+      $http({
+        method: "GET",
+        url: "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + ville + "&appid=ee07e2bf337034f905cde0bdedae3db8&lang=FR&units=metric"
+      }).then(function successCallback(response) {
+        // this callback will be called asynchronously
+        // when the response is available
+        console.log(response);
+        console.log(response.data);
+        var json = response.data;
+        $scope.element.push({
+          titrelundi: json.list.dt,
+          weather_icon: "wi main-icon wi-owm-" + json.weather[0].id,
+          temperature: json.list.temp.day + "°C",
+          temperature_min: json.list.temp.min + "°C min",
+          temperature_max: json.list.temp.max + "°C max"
+        });
+
+
+      }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      })
+    }
+  }
+)

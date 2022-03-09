@@ -1,168 +1,198 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <div class="card">
+<div class="card">
     <div class="card-content">
-      <h2>Vannes</h2>
+        <h2 id="city">{{x.city}}</h2>
     </div>
-    
-    </div>
-    <div class="w3-cell w3-mobile">
-    
-      <div id="lundi" class="w3-card w3-center">
-        <div class = "darken-4" >
-            
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-            
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</p>
-            </div>
-        
-            <div class = "child"">
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div> 
-      </div>
-    </div>
-    <div class="w3-cell w3-mobile">
-    
-      <div id="mardi"  class="w3-card w3-center">
-        <div class = "darken-4" >
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-        
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h6>
-            </div>
-        
-            <div class = "child"">
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div>
-      </div>
 
-    </div>
-    <div class="w3-cell w3-mobile">
-
-
-      <div id="mercredi"  class="w3-card w3-center">
-        <div class = "darken-4" >
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-        
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h6>
-            </div>
-        
-            <div class = "child"">
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div id="jeudi"  class="w3-card w3-center">
-        <div class = "darken-4" >
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-        
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h6>
-            </div>
-        
-            <div class = "child"">
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div>
-      </div>
-
-
-    </div>
-    <div class="w3-cell w3-mobile">
-      <div id="vendredi"  class="w3-card w3-center">
-        <div class = "darken-4" >
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-        
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h6>
-            </div>
-        
-            <div class = "child"">
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div>
-      </div>
-    
-    </div>
-    <div class="w3-cell w3-mobile">
-      <div id="samedi"  class="w3-card w3-center">
-        <div class = "darken-4" >
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-        
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h6>
-            </div>
-        
-            <div class = "child"">
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="w3-cell w3-mobile">
-      <div id="dimanche"  class="w3-card w3-center">
-        <div class = "darken-4" >
-            <div class = "child" style="text-align: left;">
-                <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
-            </div>
-        
-            <div class = "child""  style="text-align: center;">
-                <p id="temperature" class="main-icon">T</h6>
-            </div>
-        
-            <div class = "child" >
-                <div style="text-align:right">
-                    <p id="temperature_max">Max</p></div>
-                <div style="text-align:right">
-                    <p id="temperature_min">Min<p></p>
-                </div>
-            </div>
-        </div>
-      </div>
-
-    </div>
 </div>
 
+<div class="row">
 
-  
+
+    <div class="col  w3-mobile">
+
+        <div id="lundi" class="card center-align">
+            <p id="titrelundi">Jour+1</p>
+                <div class="darken-4">
+
+                    <div class="child" style="text-align: left;">
+                        <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                    </div>
+
+                    <div class="child""  style=" text-align: center;">
+                        <p id="temperature" class="main-icon">T</p>
+                    </div>
+
+                    <div class="child"">
+                        <div style=" text-align:right">
+                            <p id="temperature_max">Max</p>
+                        </div>
+                        <div style="text-align:right">
+                            <p id="temperature_min">Min
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="col  w3-mobile">
+
+        <div id="mardi" class="card center-align">
+            <p id="titremardi">Jour+2</p>
+            <div class="darken-4">
+                <div class="child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+
+                <div class="child""  style=" text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+
+                <div class="child"">
+                    <div style=" text-align:right">
+                    <p id="temperature_max">Max</p>
+                </div>
+                <div style="text-align:right">
+                    <p id="temperature_min">Min
+                    <p></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col  w3-mobile">
+        <div id="mercredi" class="card center-align">
+            <p id="titremercredi">Jour+3</p>
+            <div class="darken-4">
+                <div class="child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+
+                <div class="child""  style=" text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+
+                <div class="child"">
+                    <div style=" text-align:right">
+                    <p id="temperature_max">Max</p>
+                </div>
+                <div style="text-align:right">
+                    <p id="temperature_min">Min
+                    <p></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col  w3-mobile">
+        <div id="jeudi" class="card center-align">
+            <p id="titrejeudi">Jour+4</p>
+            <div class="darken-4">
+                <div class="child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+
+                <div class="child""  style=" text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+
+                <div class="child"">
+                        <div style=" text-align:right">
+                    <p id="temperature_max">Max</p>
+                </div>
+                <div style="text-align:right">
+                    <p id="temperature_min">Min
+                    <p></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col  w3-mobile">
+        <div id="vendredi" class="card center-align">
+            <p id="titrevendredi">Jour+5</p>
+            <div class="darken-4">
+                <div class="child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+
+                <div class="child""  style=" text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+
+                <div class="child"">
+                    <div style=" text-align:right">
+                    <p id="temperature_max">Max</p>
+                </div>
+                <div style="text-align:right">
+                    <p id="temperature_min">Min
+                    <p></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col  w3-mobile">
+        <div id="samedi" class="card center-align">
+            <p id="titresamedi">Jour+6</p>
+                <div class="darken-4">
+                    <div class="child" style="text-align: left;">
+                        <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                    </div>
+                
+                    <div class="child""  style=" text-align: center;">
+                        <p id="temperature" class="main-icon">T</h6>
+                    </div>
+                
+                    <div class="child"">
+                            <div style=" text-align:right">
+                            <p id="temperature_max">Max</p>
+                    </div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min
+                        <p></p>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col  w3-mobile">
+        <div id="dimanche" class="card center-align">
+            <p id="titredimanche">Jour+7/p>
+            <div class="darken-4">
+                <div class="child" style="text-align: left;">
+                    <i id="weather_icon" class="wi main-icon wi-owm-803"></i>
+                </div>
+
+                <div class="child""  style=" text-align: center;">
+                    <p id="temperature" class="main-icon">T</h6>
+                </div>
+
+                <div class="child">
+                    <div style="text-align:right">
+                        <p id="temperature_max">Max</p>
+                    </div>
+                    <div style="text-align:right">
+                        <p id="temperature_min">Min
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
